@@ -1,0 +1,11 @@
+doctype html
+<!--[if lt IE 9]> <html class="ie8 old-ie" lang="en"> <![endif]-->
+<!--[if gte IE 9]><!-->
+html lang="en" ng-app="stargrin"
+  <!--<![endif]-->
+  head
+    = render 'layouts/head'
+  body
+    = render 'layouts/header'
+    = yield
+    = render 'layouts/footer'

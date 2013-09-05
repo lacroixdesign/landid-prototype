@@ -1,0 +1,78 @@
+@mixin btn($bg, $color: white, $border: #aaa, $variation: 5) {
+  display: inline-block;
+  padding: 0.65em 1.25em;
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid $border;
+  border-radius: 3px;
+  box-shadow: none;
+  background: $bg;
+  color: $color;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.2;
+  @include transition(none);
+
+  &:visited {
+    background: $bg;
+    color: $color;
+  }
+
+  &:hover {
+    border-color: lighten($border, $variation);
+    background: lighten($bg, $variation+2);
+    color: $color;
+  }
+
+  &:active {
+    border: none;
+    border-top: 1px solid $border;
+    background: darken($bg, $variation+2);
+    color: $color;
+  }
+
+  &:focus {
+    color: $color;
+  }
+
+  &.large {
+    font-size: 1.25em;
+  }
+
+  &.x-large {
+    font-size: 1.5em;
+  }
+
+  &.small {
+    font-size: 0.875em;
+  }
+
+  &.mini {
+    font-size: 0.75em;
+  }
+
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:active {
+    @include opacity(0.5);
+  }
+
+  i[data-icon] {
+    position: relative;
+    top: 2px;
+  }
+
+  &.icon-left {
+    [data-icon] {
+      margin-right: 0.5em;
+    }
+  }
+
+  &.icon-right {
+    [data-icon] {
+      margin-left: 0.5em;
+    }
+  }
+
+  @content;
+}

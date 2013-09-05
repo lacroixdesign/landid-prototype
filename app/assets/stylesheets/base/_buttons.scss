@@ -1,0 +1,11 @@
+.btn-primary {
+  @include btn($red, $dark-red, $border: darken($red, 15), $variation: 1);
+}
+
+.btn-plain {
+  @include btn($light-grey, $dark-grey, $border: darken($light-grey, 15), $variation: 1);
+}
+
+.btn-alt {
+  @include btn($green, $white, $border: darken($green, 15), $variation: 1);
+}
