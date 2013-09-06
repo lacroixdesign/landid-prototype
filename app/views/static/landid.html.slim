@@ -1,0 +1,28 @@
+.l-single-post
+  section.m-post
+
+    header.m-post-header
+      h1 = @post[:title]
+      h2 = @post[:place]
+
+    .m-post-images
+      .post-images-main
+        img src=@post[:main_image]
+      .post-images-feet
+        img src=@post[:feet_image]
+
+    .m-post-meta
+      .post-meta-coordinates
+        = icon('e000')
+        = render 'coordinates', coord: @post[:coordinates][:lat]
+        = render 'coordinates', coord: @post[:coordinates][:lng]
+      / .post-meta-timestamp = @post[:datetime].strftime("%a %b %e, %Y - %l:%M %P")
+      .post-meta-timestamp
+        = @post[:datetime].strftime("%a %b %e, %Y")
+        | &nbsp;&bull;&nbsp;
+        = @post[:datetime].strftime("%l:%M %P")
+
+    .m-post-description
+      .post-description-title Description
+      .post-description-content.m-content
+        = raw @post[:description]

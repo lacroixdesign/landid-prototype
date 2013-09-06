@@ -20,9 +20,13 @@
 
 // Layout
 @import "layout/containers";
+@import "layout/posts";
 
 // Modules
+@import "modules/posts";
 
 // Sections
+@import "sections/header";
+@import "sections/footer";
 
 // States

@@ -1,0 +1,32 @@
+.l-single-post {
+  max-width: $max-post-width;
+  padding: 0 0.5em;
+  margin: 3em auto;
+
+  .m-post-header {
+    margin-bottom: 1em;
+  }
+
+  .m-post-images {
+    margin-bottom: 0.5em;
+  }
+
+  .m-post-meta {
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  @include media-ie($max-post-width) {
+    padding: 0;
+
+    .post-meta-coordinates {
+      float: left;
+    }
+
+    .post-meta-timestamp {
+      float: right;
+    }
+
+  } // @include media-ie($max-post-width)
+
+} // .l-single-post
