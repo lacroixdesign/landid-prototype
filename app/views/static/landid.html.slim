@@ -1,9 +1,9 @@
-.l-single-post
-  section.m-post
+.l-constrained.l-single-post
 
+  section.m-post.m-container
     header.m-post-header
       h1 = @post[:title]
-      h2 = @post[:place]
+      h3 = @post[:place]
 
     .m-post-images
       .post-images-main
@@ -16,7 +16,6 @@
         = icon('e000')
         = render 'coordinates', coord: @post[:coordinates][:lat]
         = render 'coordinates', coord: @post[:coordinates][:lng]
-      / .post-meta-timestamp = @post[:datetime].strftime("%a %b %e, %Y - %l:%M %P")
       .post-meta-timestamp
         = @post[:datetime].strftime("%a %b %e, %Y")
         | &nbsp;&bull;&nbsp;
@@ -26,3 +25,9 @@
       .post-description-title Description
       .post-description-content.m-content
         = raw @post[:description]
+
+  section.s-app-cta.m-container
+    h2.app-cta-title Welcome to LandID
+    hr
+    p.app-cta-copy LandID is a lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    a href="https://itunes.apple.com/us/app/google-search/id284815942?mt=8&uo=4" target="itunes_store"style="display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.png) no-repeat;width:135px;height:40px;@media only screen{background-image:url(http://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.svg);}"

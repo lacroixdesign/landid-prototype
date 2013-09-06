@@ -3,17 +3,12 @@
  */
 .m-post {
   padding: 0.75em 1em 0.5em;
-  border: 1px solid darken($white, 4);
-  border-bottom: 1px solid darken($white, 10);
-  border-radius: 3px;
-  background: $white;
 } // .m-post
 
 /*
  * Post header
  */
 .m-post-header {
-  font-size: 75%;
   text-align: center;
 
   h2 {

@@ -1,6 +1,7 @@
 #header {
   background: $red;
-  border-bottom: 1px solid darken($red, 15);
+  @include background-image( radial-gradient(lighten($red, 3), darken($red, 3)) );
+  border-bottom: 1px solid darken($red, 20);
   text-align: center;
 
   .header-logo {

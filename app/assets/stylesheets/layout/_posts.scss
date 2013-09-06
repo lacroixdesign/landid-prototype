@@ -1,7 +1,16 @@
 .l-single-post {
-  max-width: $max-post-width;
   padding: 0 0.5em;
   margin: 3em auto;
+
+  .m-post {
+    max-width: $max-post-width;
+    margin: 0 auto 1em;
+  }
+
+  .s-app-cta {
+    max-width: $max-post-width * 0.75;
+    margin: 0 auto 1em;
+  }
 
   .m-post-header {
     margin-bottom: 1em;
@@ -12,12 +21,12 @@
   }
 
   .m-post-meta {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     text-align: center;
   }
 
   @include media-ie($max-post-width) {
-    padding: 0;
+    padding: 0 $page-gutter;
 
     .post-meta-coordinates {
       float: left;
@@ -28,5 +37,19 @@
     }
 
   } // @include media-ie($max-post-width)
+
+  @include media-ie(1024px) {
+
+    .m-post {
+      @include span-columns(6);
+      @include shift(3);
+    }
+
+    .s-app-cta {
+      @include span-columns(3);
+      @include omega;
+    }
+
+  } // @include media-ie(1024px)
 
 } // .l-single-post
