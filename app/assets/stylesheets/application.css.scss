@@ -19,16 +19,9 @@
 @import "base/forms";
 
 // Layout
-@import "layout/containers";
-@import "layout/posts";
-
+@import "layout/*";
 // Modules
-@import "modules/containers";
-@import "modules/posts";
-
+@import "modules/*";
 // Sections
-@import "sections/header";
-@import "sections/footer";
-@import "sections/app_cta";
-
+@import "sections/*";
 // States

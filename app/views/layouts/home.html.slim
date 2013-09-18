@@ -1,0 +1,30 @@
+doctype html
+<!--[if lt IE 9]> <html class="ie8 old-ie" lang="en"> <![endif]-->
+<!--[if gte IE 9]><!-->
+html lang="en" ng-app="stargrin"
+  <!--<![endif]-->
+  head
+    = render 'layouts/head'
+  body.s-home-page
+    = yield
+
+    footer#footer-home
+      .l-constrained
+        ul.footer--icons
+          li
+            a(href="https://facebook.com" target="_blank")
+              = icon("e001")
+          li
+            a(href="https://www.twitter.com" target="_blank")
+              = icon("e004")
+          li
+            a(href="http://tumblr.com/" target="_blank")
+              = icon("e002")
+          li
+            a(href="mailto:info@landid.com")
+              = icon("e003")
+
+        ul.footer--legal
+          li &copy;2013 Frontback
+          li &bull;
+          li: a(href="#" target="_blank") Terms &amp; Privacy

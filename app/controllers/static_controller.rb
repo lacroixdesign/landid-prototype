@@ -1,5 +1,9 @@
 class StaticController < ApplicationController
 
+  def index
+    render layout: 'home'
+  end
+
   def landid
     @post = post_json_from_api_stub
   end
