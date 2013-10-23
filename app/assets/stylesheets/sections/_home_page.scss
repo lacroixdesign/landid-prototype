@@ -1,3 +1,12 @@
+@include keyframes(screen-slide) {
+  0%, 100% {
+    @include transform(translateY(0));
+  }
+  50% {
+    @include transform(translateY(-15%));
+  }
+}
+
 /*
  * Home page
  */
@@ -66,10 +75,39 @@
     max-width: 40em;
   }
 
-  .s-home-intro--phone {
+  .s-home-intro--phone-wrap {
+    position: relative;
     max-width: 10em;
     margin: 0 auto;
-    img { width: 100%; }
+  }
+
+  .s-home-intro--phone {
+    position: relative;
+    z-index: 3;
+    display: block;
+    width: 100%;
+  }
+
+  .s-home-intro--screen-wrap {
+    position: absolute;
+    top: 20.7%;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 57.5%;
+    overflow-y: hidden;
+    padding: 0 19.5% 0 17.5%;
+  }
+
+  .s-home-intro--screen {
+    display: block;
+    @include backface-visibility(hidden);
+    width: 100%;
+    height: auto;
+    @include animation-name(screen-slide);
+    @include animation-delay(1.5s);
+    @include animation-iteration-count(infinite);
+    @include animation-duration(5s);
   }
 
   .s-home-intro--download {
@@ -101,7 +139,7 @@
       max-width: none;
     }
 
-    .s-home-intro--phone {
+    .s-home-intro--phone-wrap {
       max-width: none;
       @include span-columns(6);
     }
